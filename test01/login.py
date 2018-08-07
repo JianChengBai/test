@@ -1,10 +1,13 @@
+from flask import Flask
+
+
 def hello():
     print("Hello World")
 
-a = 1
-b = 2
-num1 = 10
-num2 = 20
-num3 = 30
-num4 = 40
-num5 = 50
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return "this is a new project"
